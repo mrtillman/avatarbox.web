@@ -1,0 +1,27 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "web server for [avatarbox.io](https://avatarbox.io)",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtillman/avatarbox.web.git"
+  },
+  "keywords": [],
+  "author": "mrtillman",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.4.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mrtillman/avatarbox.web/issues"
+  },
+  "homepage": "https://github.com/mrtillman/avatarbox.web#readme"
+}
