@@ -1,4 +1,4 @@
-const site = (function () {
+window.site = (function () {
   return {
     reportFeedback: (onLoad) => {
       Sentry.showReportDialog({ eventId, onLoad });
