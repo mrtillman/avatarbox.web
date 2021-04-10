@@ -3,13 +3,20 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: `${__dirname}/js/app.js`,
+  entry: {
+    bundle:[
+      `${__dirname}/js/bundle.js`,
+    ],
+    calendar:[
+      `${__dirname}/js/calendar.js`
+    ]
+  },
   mode: 'production',
   output: {
     path: `${__dirname}/dist`,
-    filename: 'bundle.min.js',
+    filename: '[name].min.js',
   },
-  plugins: [new MiniCssExtractPlugin({ filename: 'bundle.min.css' })],
+  plugins: [new MiniCssExtractPlugin({ filename: "[name].min.css" })],
   module: {
     rules: [
       {
@@ -17,6 +24,12 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+        ],
+      },
+      {
+        test: /\.(svg|gif|png|eot|woff|ttf)$/,
+        use: [
+          'url-loader',
         ],
       },
     ],
