@@ -5,6 +5,11 @@
 * Browsers: last 4 version
 */
 
+html, body{
+  height: 100vh;
+  width: 100vw;
+}
+
 .slides {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +170,16 @@ button#disable {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom:10px;
+}
+
+figure.calendar-icon {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+figure.calendar-icon .calendar-img {
+  object-fit: cover;
+  z-index: 0;
 }
 
 @media screen and (max-width:768px){
