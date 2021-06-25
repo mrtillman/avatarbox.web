@@ -109,6 +109,7 @@ noscript .avatar-icon {
   padding: 10px 0;
 }
 
+.navbar-brand .avatar-icon img,
 .navbar-end .avatar-icon img {
   object-fit: cover;
   height: 100%;
