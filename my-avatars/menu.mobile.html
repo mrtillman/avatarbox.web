@@ -38,7 +38,18 @@
     .panel-block {
       justify-content: center;
     }
+    #imageUpload {
+      display: none;
+    }
   </style>
+  <script>
+    window.onload = function(){
+      const uploadButton = document.getElementById("btnUpload");
+      uploadButton.onclick = function(){
+        document.getElementById("imageUpload").click();
+      }
+    }
+  </script>
 </head>
 <body id="menu">
   <div id="__next">
@@ -92,7 +103,8 @@
         <a class="panel-block">
           DELETE
         </a>
-        <a class="panel-block" href="#">UPLOAD</a>
+        <input id="imageUpload" type="file" accept="image/png, image/jpeg"/>
+        <a id="btnUpload" class="panel-block" href="#">UPLOAD</a>
       </article>
     </div>
   </div>

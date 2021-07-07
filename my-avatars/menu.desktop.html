@@ -44,7 +44,18 @@
       width: 250px;
       height: 250px;
     }
+    #imageUpload {
+      display: none;
+    }
   </style>
+  <script>
+    window.onload = function(){
+      const uploadButton = document.getElementById("btnUpload");
+      uploadButton.onclick = function(){
+        document.getElementById("imageUpload").click();
+      }
+    }
+  </script>
 </head>
 <body id="menu">
   <div id="__next">
@@ -98,7 +109,8 @@
         <ul class="menu-list">
           <li><a>DELETE</a></li>
           <li>
-            <a href="#">UPLOAD</a>
+            <input id="imageUpload" type="file" accept="image/png, image/jpeg"/>
+            <a id="btnUpload" href="#">UPLOAD</a>
           </li>
         </ul>        
       </aside>
